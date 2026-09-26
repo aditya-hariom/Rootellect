@@ -17,58 +17,109 @@ export default async function HomePage() {
     <div className="flex flex-col min-h-screen">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#F4F7F5] via-[#FBF9F5] to-white pt-12 sm:pt-20 pb-16 sm:pb-24 border-b border-[#E8E2D9]">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#F4F7F5] via-[#FBF9F5] to-white pt-10 sm:pt-16 pb-16 sm:pb-24 border-b border-[#E8E2D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1ED] border border-[#CADCD1] text-xs font-semibold text-[#1E3A2F]">
-              <Leaf className="w-3.5 h-3.5 text-[#8FA382]" />
-              <span>Evidence-Anchored Botanical Formulations</span>
+            {/* Left Column: Headlines, Value Prop & Actions (7 cols) */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1ED] border border-[#CADCD1] text-xs font-semibold text-[#1E3A2F]">
+                <Leaf className="w-3.5 h-3.5 text-[#8FA382]" />
+                <span>Evidence-Anchored Botanical Formulations</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#1E3A2F] tracking-tight leading-[1.12]">
+                Targeted Botanical Care for Modern Nervous &amp; Hormonal Balance.
+              </h1>
+
+              <p className="text-base sm:text-lg text-[#5D6B64] leading-relaxed max-w-2xl">
+                Rootellect crafts clean, standardized herbal therapeutics designed to nourish circadian calm, cycle equilibrium, and sustained vitality without synthetic additives.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+                <Link
+                  href="#catalogue"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E3A2F] text-white text-sm font-semibold hover:bg-[#294D3F] active:scale-95 transition-smooth shadow-md"
+                >
+                  <span>Explore 4 Core Formulas</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="#bundles"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#1E3A2F] border border-[#CADCD1] text-sm font-semibold hover:bg-[#F4F7F5] active:scale-95 transition-smooth shadow-2xs"
+                >
+                  <Sparkles className="w-4 h-4 text-[#8FA382]" />
+                  <span>Mind Calm Duos (Save ₹199)</span>
+                </Link>
+              </div>
+
+              {/* Quick trust metrics */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-[#E8E2D9]">
+                <div>
+                  <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">4</span>
+                  <p className="text-xs text-[#5D6B64] mt-0.5">Fixed Formulas</p>
+                </div>
+                <div>
+                  <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">₹0</span>
+                  <p className="text-xs text-[#5D6B64] mt-0.5">Free Shipping</p>
+                </div>
+                <div>
+                  <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">100%</span>
+                  <p className="text-xs text-[#5D6B64] mt-0.5">Standardized</p>
+                </div>
+                <div>
+                  <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">12%</span>
+                  <p className="text-xs text-[#5D6B64] mt-0.5">Max Savings</p>
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#1E3A2F] tracking-tight leading-[1.15]">
-              Targeted Botanical Care for Modern Nervous &amp; Hormonal Balance.
-            </h1>
+            {/* Right Column: Hero Visual Showcase (5 cols) */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-square max-w-md mx-auto lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
+                <img
+                  src="/images/hero-showcase.jpg"
+                  alt="Rootellect Mind Calm and Women Balance Botanical Formulations Showcase"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
+                />
 
-            <p className="text-base sm:text-lg text-[#5D6B64] leading-relaxed max-w-2xl">
-              Rootellect crafts clean, standardized herbal therapeutics designed to nourish circadian calm, cycle equilibrium, and sustained vitality without synthetic additives.
-            </p>
+                {/* Floating Top Badge */}
+                <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                  <span className="bg-[#1E3A2F]/90 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-[#8FA382]" />
+                    <span>Signature Foundation Duo</span>
+                  </span>
+                  <span className="bg-white/95 backdrop-blur-md text-[#1E3A2F] text-[11px] font-bold px-3 py-1.5 rounded-full shadow-md">
+                    Save ₹199
+                  </span>
+                </div>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                href="#catalogue"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E3A2F] text-white text-sm font-semibold hover:bg-[#294D3F] active:scale-95 transition-smooth shadow-md"
-              >
-                <span>Explore 4 Core Formulas</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="#bundles"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#1E3A2F] border border-[#CADCD1] text-sm font-semibold hover:bg-[#F4F7F5] active:scale-95 transition-smooth shadow-2xs"
-              >
-                <Sparkles className="w-4 h-4 text-[#8FA382]" />
-                <span>Mind Calm Duos (Save ₹199)</span>
-              </Link>
-            </div>
+                {/* Floating Bottom Card */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-[#E8E2D9] shadow-lg flex items-center justify-between">
+                  <div>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#8FA382] block">
+                      Evidence-Anchored Duo
+                    </span>
+                    <span className="text-sm font-bold text-[#1E3A2F] block">
+                      Mind Calm + Women Balance
+                    </span>
+                    <span className="text-[11px] text-[#5D6B64] block">
+                      30 Caps + 60 Caps • ₹1,399 (Free Delivery)
+                    </span>
+                  </div>
+                  <Link
+                    href="/bundles"
+                    className="p-3 rounded-xl bg-[#1E3A2F] text-white hover:bg-[#294D3F] active:scale-95 transition-smooth shrink-0 shadow-sm"
+                    aria-label="View Mind Calm and Women Balance Duo Bundle"
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
 
-            {/* Quick trust metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-[#E8E2D9]">
-              <div>
-                <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">4</span>
-                <p className="text-xs text-[#5D6B64] mt-0.5">Fixed Targeted Formulas</p>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">₹0</span>
-                <p className="text-xs text-[#5D6B64] mt-0.5">Standard Pan-India Shipping</p>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">100%</span>
-                <p className="text-xs text-[#5D6B64] mt-0.5">Standardized Botanicals</p>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-bold text-[#1E3A2F]">12%</span>
-                <p className="text-xs text-[#5D6B64] mt-0.5">Max Savings on 3-Packs</p>
-              </div>
+              {/* Decorative ambient background accents */}
+              <div className="absolute -top-6 -right-6 w-36 h-36 bg-[#8FA382]/25 rounded-full blur-2xl -z-10 pointer-events-none" />
+              <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-[#CADCD1]/40 rounded-full blur-2xl -z-10 pointer-events-none" />
             </div>
 
           </div>
