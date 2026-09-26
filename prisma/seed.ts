@@ -24,7 +24,7 @@ export const INITIAL_PRODUCTS = [
     ingredients: 'Ashwagandha KSM-66 (300mg), L-Theanine (150mg), Holy Basil/Tulsi Extract (100mg), Magnesium Glycinate (100mg)',
     dosage: 'Take 1 capsule daily with water, preferably in the late afternoon or 45 minutes before unwinding.',
     stock: 250,
-    image: '/images/products/mind-calm.svg',
+    image: '/images/products/mind-calm.jpg',
   },
   {
     slug: 'women-balance-formula',
@@ -47,7 +47,7 @@ export const INITIAL_PRODUCTS = [
     ingredients: 'Shatavari Extract (250mg), Chasteberry/Vitex (200mg), Dong Quai (150mg), Vitamin B6 (P5P, 25mg), Zinc Bisglycinate (15mg)',
     dosage: 'Take 2 capsules daily with breakfast or your first substantial meal.',
     stock: 220,
-    image: '/images/products/women-balance.svg',
+    image: '/images/products/women-balance.jpg',
   },
   {
     slug: 'pcos-pcod-support-formula',
@@ -70,7 +70,7 @@ export const INITIAL_PRODUCTS = [
     ingredients: 'Myo-Inositol (2000mg equivalent), D-Chiro Inositol (50mg), Berberine HCl (250mg), Chromium Picolinate (200mcg), Folate (400mcg)',
     dosage: 'Take 2 tablets daily with water, ideally split before breakfast and dinner.',
     stock: 180,
-    image: '/images/products/pcos-pcod.svg',
+    image: '/images/products/pcos-pcod.jpg',
   },
   {
     slug: 'perimenopause-support',
@@ -93,7 +93,7 @@ export const INITIAL_PRODUCTS = [
     ingredients: 'Black Cohosh Extract (80mg), Red Clover Isoflavones (100mg), Sage Leaf Extract (150mg), Maca Root Gelatinized (250mg), Marine Magnesium (120mg)',
     dosage: 'Take 2 tablets daily with dinner or 1 hour prior to sleep.',
     stock: 190,
-    image: '/images/products/perimenopause.svg',
+    image: '/images/products/perimenopause.jpg',
   },
 ];
 

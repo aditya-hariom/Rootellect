@@ -12,14 +12,14 @@ export default function ProductCard({ product }: ProductCardProps) {
     <article className="group flex flex-col bg-white rounded-2xl border border-[#E8E2D9] overflow-hidden hover:shadow-md hover:border-[#CADCD1] transition-smooth focus-within:ring-2 focus-within:ring-[#1E3A2F]">
       
       {/* Product Image Area */}
-      <div className="relative aspect-[4/3] bg-[#F4F7F5] overflow-hidden p-6 flex items-center justify-center border-b border-[#E8E2D9]/60">
-        <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[#1E3A2F] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#CADCD1]/60 shadow-2xs">
+      <div className="relative aspect-square bg-[#F4F7F5] overflow-hidden flex items-center justify-center border-b border-[#E8E2D9]/60">
+        <span className="absolute top-3 left-3 z-10 bg-white/90 backdrop-blur-xs text-[#1E3A2F] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#CADCD1]/60 shadow-2xs">
           {product.category}
         </span>
         <img
           src={product.image}
           alt={`Bottle of ${product.name} - ${product.singleCount} ${product.form}`}
-          className="w-full h-full object-contain group-hover:scale-105 transition-smooth"
+          className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
           loading="lazy"
         />
       </div>

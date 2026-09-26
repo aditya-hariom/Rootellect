@@ -77,11 +77,11 @@ export default function CartDrawer() {
                     className="p-4 rounded-xl bg-white border border-[#E8E2D9] shadow-sm flex gap-3.5 items-start"
                   >
                     {/* Item Image */}
-                    <div className="w-16 h-20 bg-[#F4F7F5] rounded-lg p-1 shrink-0 border border-[#EBF1ED] relative flex items-center justify-center">
+                    <div className="w-16 h-16 bg-[#F4F7F5] rounded-xl overflow-hidden shrink-0 border border-[#EBF1ED] relative flex items-center justify-center">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
 

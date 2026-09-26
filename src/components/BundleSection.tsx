@@ -22,7 +22,7 @@ const PARTNER_OPTIONS: PartnerOption[] = [
     tagline: 'Comprehensive daily endocrine harmony & cyclical rhythm',
     count: 60,
     form: 'capsules',
-    image: '/images/products/women-balance.svg',
+    image: '/images/products/women-balance.jpg',
     benefit: 'Soothes hormonal stress, mood dips, and monthly cycle tension.',
   },
   {
@@ -31,7 +31,7 @@ const PARTNER_OPTIONS: PartnerOption[] = [
     tagline: 'Targeted insulin sensitization & ovarian follicle wellness',
     count: 60,
     form: 'tablets',
-    image: '/images/products/pcos-pcod.svg',
+    image: '/images/products/pcos-pcod.jpg',
     benefit: 'Assists natural ovulation, insulin balance, and clear skin.',
   },
   {
@@ -40,7 +40,7 @@ const PARTNER_OPTIONS: PartnerOption[] = [
     tagline: 'Adaptive vasomotor comfort, sleep & transition vitality',
     count: 60,
     form: 'tablets',
-    image: '/images/products/perimenopause.svg',
+    image: '/images/products/perimenopause.jpg',
     benefit: 'Moderates sudden temperature spikes, night sweats, and fatigue.',
   },
 ];
@@ -67,7 +67,7 @@ export default function BundleSection() {
       quantity: 1,
       unitPrice: 1399,
       bottleCountPerPack: 2,
-      image: '/images/products/mind-calm.svg',
+      image: '/images/products/mind-calm.jpg',
       savings: 199,
     };
 
@@ -101,11 +101,11 @@ export default function BundleSection() {
           <div className="lg:col-span-5 flex items-center justify-center gap-3 sm:gap-4 bg-[#FBF9F5] rounded-2xl p-6 border border-[#E8E2D9]">
             {/* Mind Calm Bottle */}
             <div className="flex-1 flex flex-col items-center text-center">
-              <div className="w-24 sm:w-28 aspect-[3/4] relative">
+              <div className="w-24 sm:w-28 aspect-square rounded-xl overflow-hidden shadow-xs relative">
                 <img
-                  src="/images/products/mind-calm.svg"
+                  src="/images/products/mind-calm.jpg"
                   alt="Mind Calm 30 capsules"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <span className="text-xs font-bold text-[#1E3A2F] mt-2">Mind Calm</span>
@@ -119,11 +119,11 @@ export default function BundleSection() {
 
             {/* Partner Formula Bottle */}
             <div className="flex-1 flex flex-col items-center text-center">
-              <div className="w-24 sm:w-28 aspect-[3/4] relative transition-smooth">
+              <div className="w-24 sm:w-28 aspect-square rounded-xl overflow-hidden shadow-xs relative transition-smooth">
                 <img
                   src={selectedPartner.image}
                   alt={`${selectedPartner.name} ${selectedPartner.count} ${selectedPartner.form}`}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <span className="text-xs font-bold text-[#1E3A2F] mt-2 truncate max-w-[110px]">

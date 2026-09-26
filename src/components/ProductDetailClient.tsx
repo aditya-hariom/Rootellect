@@ -102,14 +102,14 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         
         {/* Left Column: Product Image & Botanical Highlights (7 cols) */}
         <div className="lg:col-span-6 space-y-6">
-          <div className="aspect-[4/3] sm:aspect-square bg-white rounded-3xl border border-[#E8E2D9] p-8 flex items-center justify-center relative overflow-hidden shadow-xs">
-            <span className="absolute top-4 left-4 bg-[#EBF1ED] text-[#1E3A2F] text-xs font-semibold px-3 py-1 rounded-full border border-[#CADCD1]">
+          <div className="aspect-square bg-white rounded-3xl border border-[#E8E2D9] overflow-hidden flex items-center justify-center relative shadow-xs">
+            <span className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-xs text-[#1E3A2F] text-xs font-semibold px-3 py-1 rounded-full border border-[#CADCD1] shadow-2xs">
               {product.category}
             </span>
             <img
               src={product.image}
               alt={`Full bottle presentation of ${product.name}`}
-              className="w-full h-full max-h-[380px] object-contain transition-smooth"
+              className="w-full h-full object-cover transition-smooth"
             />
           </div>
 
