@@ -2,12 +2,16 @@
 
 > **Important Assessment Notice:** Assessment demo — no real purchases. This application is an independently designed, resilient wellness e-commerce demonstration created for the Rootellect Full-Stack Developer Intern technical review. Disallows search engine indexing via `<meta name="robots" content="noindex, nofollow" />`.
 
+🚀 **Live Deployment URL:** [https://rootellect-puce.vercel.app/](https://rootellect-puce.vercel.app/)  
+📂 **Source Code Repository:** [https://github.com/aditya-hariom/Rootellect.git](https://github.com/aditya-hariom/Rootellect.git)
+
 ---
 
 ## 1. Project Overview & Candidate Ownership
 
 - **Applicant:** Aditya Kumar
 - **Role:** Full-Stack Developer Intern
+- **Live Demo:** [https://rootellect-puce.vercel.app/](https://rootellect-puce.vercel.app/)
 - **Repository:** [https://github.com/aditya-hariom/Rootellect.git](https://github.com/aditya-hariom/Rootellect.git)
 - **Tech Stack:** Next.js 16 (App Router, React 19, TypeScript), Tailwind CSS v4, Prisma ORM (SQLite / PostgreSQL compatible)
 - **Automated Tests:** 10 Passing Tests across 3 Suites (`npm test`)
