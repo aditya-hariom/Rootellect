@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Sparkles, ShieldCheck, Heart, Leaf, HelpCircle, RefreshCw, CheckCircle2 } from 'lucide-react';
-import prisma from '@/lib/prisma';
+import { getProducts } from '@/lib/products';
 import CatalogueSection from '@/components/CatalogueSection';
 import BundleSection from '@/components/BundleSection';
 
@@ -9,9 +9,7 @@ import BundleSection from '@/components/BundleSection';
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  const products = await prisma.product.findMany({
-    orderBy: { basePrice: 'asc' },
-  });
+  const products = await getProducts();
 
   return (
     <div className="flex flex-col min-h-screen">
