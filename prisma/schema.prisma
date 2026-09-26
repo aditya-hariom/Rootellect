@@ -1,0 +1,62 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id           String      @id @default(cuid())
+  slug         String      @unique
+  name         String
+  tagline      String
+  category     String
+  form         String      // "capsules" | "tablets"
+  singleCount  Int         // 30 or 60
+  basePrice    Int         // 799 (1 bottle)
+  twoPrice     Int         // 1499 (2 bottles)
+  threePrice   Int         // 2099 (3 bottles)
+  description  String
+  benefits     String      // JSON string array of benefits
+  ingredients  String
+  dosage       String
+  stock        Int         @default(150)
+  image        String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  orderItems   OrderItem[]
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  reference       String      @unique
+  customerName    String
+  customerEmail   String
+  customerPhone   String
+  shippingAddress String
+  city            String
+  postalCode      String
+  totalAmount     Int
+  totalBottles    Int
+  status          String      // "CONFIRMED"
+  isSimulated     Boolean     @default(true)
+  createdAt       DateTime    @default(now())
+  items           OrderItem[]
+}
+
+model OrderItem {
+  id          String   @id @default(cuid())
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String?
+  product     Product? @relation(fields: [productId], references: [id])
+  itemType    String   // "SINGLE_PACK" | "DUO_BUNDLE"
+  name        String
+  packType    Int      // 1, 2, or 3
+  quantity    Int
+  unitPrice   Int      // Snapshot price in INR
+  lineTotal   Int      // unitPrice * quantity
+  bottleCount Int      // Total bottles for this line
+}
